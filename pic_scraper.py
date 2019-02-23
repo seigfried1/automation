@@ -13,12 +13,6 @@ soup = BeautifulSoup(html.text, 'html.parser')
 # Searching for all images on the page.
 imageList = []
 contents = soup.find_all('img')
-for i in contents:
-	try:
-		imageList.append(i['src'])
-		# print(i['src'])
-	except:
-		pass
 
 # Saving the image
 for num, i in enumerate(contents):
